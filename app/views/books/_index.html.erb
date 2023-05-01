@@ -9,17 +9,17 @@
   </thead>
   <tbody id="book">
     <% books.each do |book| %>
-      <tr>
+      <tr id="book_<%= book.id %>">
         <td><%= link_to(book.user) do %>
           <%= image_tag book.user.get_profile_image, size:'50x50' %>
           <% end %>
         </td>
         <td><%= link_to book.title,book %></td>
         <td><%= book.body %></td>
-        <td id="favorite_btn_<%= book.id %>">
-　　　    <%= render "favorites/favorites", book: book %>
+        <td  id="favorites_<%= book.id %>">
+　　　    <%= render "favorites/favorite", book: book %>
         </td>
-       <td><i class="fa fa-comments"></i> <%= book.book_comments.count %></td>
+       <td class="comments-count"><i class="fa fa-comments"></i> <%= book.book_comments.count %></td>
       </tr>
     <% end %>
   </tbody>
