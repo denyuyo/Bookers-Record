@@ -38,9 +38,9 @@
           <% end %>
         </tr>
       </table>
-      <table class="class="col-xs-9"">
-       <tbody>
-  			<%= render 'comments/comment', book_comments: @book_comments %>
+      <table class="col-xs-9">
+       <tbody id="comment">
+  			<%= render 'book_comments/comment', book_comments: @book_comments %>
 		   </tbody>
 		  </table>
 		  	<%= form_with model: [@book, @book_comment], local: false do |f| %>
