@@ -1,2 +1,1 @@
-$('#favorites_<%= @book.id %>').html("<%= j(render "favorites/favorite", book: @book) %>");
-alert('いいねを解除している');
+$("#favorites_<%= @book.id %>").html("<%= j(render 'favorites/favorite', book: @book) %>");

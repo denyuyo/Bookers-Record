@@ -22,3 +22,10 @@ require("channels")
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+require("chartkick")
+require("chart.js")
+
+document.addEventListner('turbolinks:load', function() {
+  console.log('Loaded');
+});
