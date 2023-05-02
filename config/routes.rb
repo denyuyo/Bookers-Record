@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '/search', to: 'searchs#search'
   
   resources :users, only: [:index,:show,:edit,:update] do
+    get "search_form" => "users#search_form"
     resource :relationships, only: [:create, :destroy]
     get :followings, on: :member
     get :followers, on: :member
